@@ -1,0 +1,15 @@
+.cinfo{display:grid;gap:18px}
+.crow{display:flex;gap:18px;align-items:center;background:#fff;border-radius:var(--r);padding:20px 24px;box-shadow:0 8px 28px rgba(10,22,51,.08);transition:transform .3s}
+.crow:hover{transform:translateX(6px)}
+.crow>span{width:54px;height:54px;flex-shrink:0;border-radius:16px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:1.3rem}
+.crow h3{font-size:1.05rem;margin-bottom:2px}
+.crow a,.crow p{color:var(--mute);margin:0!important;word-break:break-word}
+.crow a:hover{color:var(--gold2)}
+.formcard{background:#fff;border-radius:22px;padding:38px;box-shadow:0 20px 60px rgba(10,22,51,.14);border-top:5px solid var(--gold)}
+.formcard h2{font-size:1.9rem;margin-bottom:6px}
+.formcard>p{margin-bottom:22px!important}
+.map{height:380px}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.2)}
+@media (max-width:768px){.formcard{padding:28px}.map{height:320px}}
+@media (max-width:520px){.formcard{padding:22px 18px}.crow{padding:16px;gap:14px}.map{height:280px}}
+@media (max-width:340px){.crow>span{width:44px;height:44px}.formcard h2{font-size:1.5rem}}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+:root{--navy:#0a1633;--navy2:#13285c;--gold:#e3b04b;--gold2:#c9962e;--bg:#f4f6fb;--ink:#18213d;--mute:#5b6580;--wa:#25d366;--r:16px;--serif:'Playfair Display',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans','Segoe UI',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{width:min(1200px,92%);margin:0 auto}
+h1,h2,h3{line-height:1.2;color:var(--navy)}
+h1,h2{font-family:var(--serif)}
+
+/* smooth one-by-one scroll reveal */
+.reveal{opacity:0;transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1)}
+.reveal.up{transform:translateY(38px)}
+.reveal.left{transform:translateX(-56px)}
+.reveal.right{transform:translateX(56px)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--navy);color:#fff;padding:14px 28px;border-radius:50px;font-weight:600;border:2px solid var(--navy);cursor:pointer;font-size:1rem;transition:.3s}
+.btn.sm{padding:10px 20px;font-size:.92rem}
+.btn.dark:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.btn.gold:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
+.btn.outline{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
+.btn.outline:hover{background:#fff;color:var(--navy)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn.wa:hover{background:#1ebe5a;border-color:#1ebe5a;transform:translateY(-2px)}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.center{text-align:center;margin-top:44px}
+.center-row{justify-content:center}
+
+/* sections */
+.sec{padding:96px 0}
+.sec.alt{background:var(--bg)}
+.sec.nopad{padding:0}
+.sec.dark{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff}
+.sh{font-size:2.5rem;text-align:center;margin-bottom:14px}
+.sh::after{content:'';display:block;width:64px;height:4px;border-radius:4px;background:var(--gold);margin:16px auto 0}
+.sh.left{text-align:left}
+.sh.left::after{margin-left:0}
+.sh.light{color:#fff}
+.sub{text-align:center;color:var(--mute);max-width:600px;margin:0 auto 50px}
+.sub.light{color:#b9c6e8}
+.sec p{color:var(--mute);margin-bottom:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:44px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split.top{align-items:start}
+.round{border-radius:24px;width:100%;height:440px;object-fit:cover;box-shadow:0 24px 50px rgba(10,22,51,.2)}
+.card{background:#fff;border-radius:var(--r);box-shadow:0 10px 34px rgba(10,22,51,.08);overflow:hidden}
+.ico{font-size:2rem;color:var(--gold2)}
+
+/* stat bar */
+.statbar{background:var(--navy);padding:42px 0;border-top:1px solid #1d3270}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:2.6rem;color:var(--gold)}
+.stat span{color:#b9c6e8}
+
+@media (max-width:1024px){
+  .grid3{grid-template-columns:repeat(2,1fr)}
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .split{gap:36px}
+  .sh{font-size:2.2rem}
+}
+@media (max-width:768px){
+  .sec{padding:68px 0}
+  .split{grid-template-columns:1fr}
+  .split.rev>*:first-child{order:2}
+  .round{height:340px}
+  .sgrid{grid-template-columns:repeat(2,1fr);gap:28px}
+  .sh{font-size:1.9rem}
+}
+@media (max-width:520px){
+  .grid2,.grid3,.grid4{grid-template-columns:1fr}
+  .row .btn{width:100%}
+  .stat b{font-size:2rem}
+  .sh{font-size:1.65rem}
+  .round{height:270px}
+}
+@media (max-width:340px){
+  .btn{padding:12px 18px;font-size:.92rem}
+  .sh{font-size:1.4rem}
+  .stat b{font-size:1.7rem}
+  .sgrid{grid-template-columns:1fr}
+  .round{height:230px}
+}

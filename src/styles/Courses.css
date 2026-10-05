@@ -1,0 +1,13 @@
+.filters{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.filters button{padding:11px 30px;border-radius:30px;border:2px solid var(--navy);background:#fff;color:var(--navy);font-weight:600;cursor:pointer;transition:.3s;font-size:1rem}
+.filters button.on,.filters button:hover{background:var(--navy);color:var(--gold)}
+.icard{display:flex;align-items:center;gap:16px;background:#fff;border-radius:14px;padding:22px 24px;box-shadow:0 8px 26px rgba(10,22,51,.07);font-weight:600;color:var(--navy)}
+.icard svg{font-size:1.7rem;color:var(--gold2);flex-shrink:0}
+.tablewrap{margin-top:44px;overflow-x:auto;border-radius:var(--r);box-shadow:0 10px 34px rgba(10,22,51,.1)}
+table{width:100%;border-collapse:collapse;min-width:560px;background:#fff}
+th{background:var(--navy);color:#fff;text-align:left;padding:18px 22px;font-weight:600}
+td{padding:16px 22px;border-bottom:1px solid #e6ebf5;color:var(--ink)}
+tbody tr:hover{background:var(--bg)}
+td b{color:var(--navy2);font-family:var(--serif);font-size:1.1rem}
+@media (max-width:520px){th,td{padding:12px 14px}.filters button{padding:9px 22px}}
+@media (max-width:340px){.icard{padding:16px;gap:12px}.filters button{padding:8px 16px;font-size:.9rem}}

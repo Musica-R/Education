@@ -1,0 +1,10 @@
+.phead{padding:190px 0 80px;text-align:center;color:#fff;position:relative;overflow:hidden;
+background:radial-gradient(circle at 85% 0%,rgba(227,176,75,.2),transparent 45%),linear-gradient(150deg,#071026,var(--navy) 55%,var(--navy2))}
+.phead::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px}
+.phead .wrap{position:relative}
+.phead h1{color:#fff;font-size:3.1rem;margin-bottom:12px}
+.phead p{color:#c3cfee;font-size:1.1rem}
+@media (max-width:1024px){.phead h1{font-size:2.7rem}}
+@media (max-width:768px){.phead{padding:130px 0 56px}.phead h1{font-size:2.3rem}}
+@media (max-width:520px){.phead h1{font-size:1.9rem}.phead p{font-size:1rem}}
+@media (max-width:340px){.phead h1{font-size:1.6rem}}

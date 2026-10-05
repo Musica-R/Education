@@ -1,0 +1,32 @@
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .4s,box-shadow .4s}
+.nav.solid{background:rgba(10,22,51,.96);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.topbar{background:rgba(0,0,0,.25);font-size:.85rem;color:#c8d3f0;max-height:40px;overflow:hidden;transition:max-height .35s}
+.topbar .wrap{display:flex;justify-content:space-between;padding:8px 0}
+.topbar svg{color:var(--gold);margin-right:7px}
+.topbar a:hover{color:var(--gold)}
+.nav.solid .topbar{max-height:0}
+.bar{display:flex;align-items:center;justify-content:space-between;height:80px}
+.brand{display:flex;align-items:center;gap:12px}
+.mono{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);display:grid;place-items:center;font-size:1.4rem;box-shadow:0 6px 18px rgba(227,176,75,.4)}
+.bn{display:flex;flex-direction:column;color:#fff;font-family:var(--serif);font-size:1.35rem;font-weight:700;line-height:1.1}
+.bn small{font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;color:var(--gold);letter-spacing:.5px;margin-top:3px}
+.links{display:flex;align-items:center;gap:6px}
+.links a{color:#e6ecff;font-weight:500;padding:9px 18px;border-radius:30px;transition:.3s}
+.links a:hover{background:rgba(255,255,255,.1)}
+.links a.active{background:var(--gold);color:var(--navy);font-weight:700}
+.links .btn{margin-left:12px}
+.burger{display:none;background:rgba(255,255,255,.1);border:0;color:#fff;font-size:1.4rem;width:46px;height:46px;border-radius:12px;cursor:pointer}
+
+@media (max-width:1024px){.links a{padding:8px 13px}.links .btn{margin-left:6px}}
+@media (max-width:768px){
+  .topbar{display:none}
+  .nav{background:rgba(10,22,51,.96)}
+  .bar{height:72px}
+  .burger{display:block}
+  .links{position:absolute;top:72px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;gap:4px;padding:0 4%;max-height:0;overflow:hidden;transition:max-height .45s,padding .45s;box-shadow:0 20px 30px rgba(0,0,0,.3)}
+  .links.open{max-height:480px;padding:16px 4% 24px}
+  .links a{padding:13px 18px}
+  .links .btn{margin:10px 0 0}
+}
+@media (max-width:520px){.bn{font-size:1.15rem}.mono{width:40px;height:40px;font-size:1.2rem}}
+@media (max-width:340px){.bn small{display:none}.bn{font-size:1.05rem}.brand{gap:8px}}

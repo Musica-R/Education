@@ -1,0 +1,13 @@
+.gal{margin-top:0;grid-auto-rows:260px}
+.gitem{border-radius:var(--r);overflow:hidden;cursor:zoom-in;position:relative;box-shadow:0 10px 30px rgba(10,22,51,.12)}
+.gitem.tall{grid-row:span 2}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.gitem::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,51,.55),transparent 55%);opacity:0;transition:.4s}
+.gitem:hover img{transform:scale(1.1)}
+.gitem:hover::after{opacity:1}
+.lightbox{position:fixed;inset:0;background:rgba(5,10,28,.93);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
+.lightbox img{max-height:88vh;border-radius:14px}
+.lightbox button{position:absolute;top:20px;right:24px;background:rgba(255,255,255,.12);border:0;color:#fff;font-size:1.5rem;width:46px;height:46px;border-radius:50%;cursor:pointer}
+@media (max-width:768px){.gal{grid-auto-rows:220px}}
+@media (max-width:520px){.gal{grid-auto-rows:230px}.gitem.tall{grid-row:span 1}}
+@media (max-width:340px){.gal{grid-auto-rows:200px}}
